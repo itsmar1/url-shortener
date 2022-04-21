@@ -1,13 +1,21 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import TheHomePage from './pages/TheHomePage';
+import ErrorPage from './pages/ErrorPage';
+import TheHeader from './layout/TheHeader';
 
 
 
 const App = () => {
   return (
-    <div className='text-center'>
-      <h1>Hello world</h1>
-      <button className='btn btn-primary'>Click me</button>
-    </div>
+    <>
+      <TheHeader />
+      <Routes>
+        <Route path='/' element={<TheHomePage />} />
+        <Route path='*' element={<ErrorPage />} />
+      </Routes>
+    </>
   );
 }
 
