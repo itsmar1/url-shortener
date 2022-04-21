@@ -1,0 +1,23 @@
+.home {
+    .urlBox {
+        max-width: 758px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 4px #ccc;
+        border-radius: 2px;
+        padding: 10px 30px 5px;
+        background: #fff;
+        h1 {
+            margin: 10px auto 30px auto;
+            font: bold 36px asap,arial;
+            color: #505050;
+            letter-spacing: -1px;
+        }
+        .parag {
+            max-width: 620px;
+            color: #484848;
+            line-height: 1.2;
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+}
