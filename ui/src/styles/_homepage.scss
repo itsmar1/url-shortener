@@ -20,4 +20,32 @@
             text-align: center;
         }
     }
+
+    .trackbox {
+        max-width: 758px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        box-shadow: 0 1px 4px #ccc;
+        border-radius: 2px;
+        padding: 10px 30px 5px;
+        background: #fff;
+        h1 {
+            margin: 15px auto 20px auto;
+            font: bold 26px asap,arial;
+            color: #505050;
+            letter-spacing: 0;
+        }
+        p {
+            max-width: 620px;
+            color: #484848;
+            line-height: 1.6;
+            margin-top: 40px;
+            text-align: center;
+        }
+        button {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 30px auto;
+        }
+    }
 }
