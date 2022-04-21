@@ -48,4 +48,24 @@
             margin: 30px auto;
         }
     }
+
+    
+    .content {
+        max-width: 720px;
+        margin: 30px auto 20px;
+        h2 {
+            
+            font: bold 26px asap,arial;
+            color: #505050;
+            letter-spacing: 0;
+        }
+        p {
+            color: #484848;
+            // line-height: 1.6;
+            text-align: left;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
 }
