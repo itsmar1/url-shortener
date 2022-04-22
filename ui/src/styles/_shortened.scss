@@ -1,0 +1,26 @@
+.shortened {
+    .content {
+        margin-bottom: 4rem;
+        max-width: 758px;
+        h1 {
+            font-weight: bold;
+            font-size: 2rem;
+            color: #505050;
+            letter-spacing: -1px;
+        }
+        p {
+            color: #484848;
+            line-height: 1.5;
+            text-align: left;
+        }
+    }
+
+    .shortened-box {
+        max-width: 758px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 4px #ccc;
+        border-radius: 2px;
+        padding: 3.5rem;
+        background: #fff;
+    }
+}
