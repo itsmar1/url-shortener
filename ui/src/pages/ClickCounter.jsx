@@ -2,6 +2,7 @@ import React from 'react';
 
 
 import TheContent from '../components/counter/TheContent';
+import ClicksUrlBox from '../components/counter/ClicksUrlBox';
 
 
 const ClickCounter = () => {
@@ -14,7 +15,8 @@ const ClickCounter = () => {
             </div>
             <div className="row">
                 <div className="col-10">
-                    {/* <ShortenedBox /> */}
+                    <ClicksUrlBox />
+                    <p className='text-note mx-auto'>* Track the total hits of the shortened URL in real time</p>
                 </div>
             </div>
         </div>
