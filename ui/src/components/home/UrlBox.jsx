@@ -1,11 +1,18 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 
+import { urlActions } from '../../store/urlSlice';
+import { useDispatch } from "react-redux";
+
 
 
 const UrlBox = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: {
       theUrl: "",
@@ -14,7 +21,6 @@ const UrlBox = () => {
       theUrl: Yup.string().url("Enter a valid URL"),
     }),
     onSubmit: async (values) => {
-      console.log(values.theUrl);
       const graphqlQuery = {
         query: `
           mutation {
@@ -27,7 +33,12 @@ const UrlBox = () => {
 
       const shortUrl = await axios.post('http://localhost:8080/graphql', graphqlQuery);
 
-      console.log(shortUrl.data.data.shortenUrl.shortUrl);
+      const id = shortUrl.data.data.shortenUrl.shortUrl
+      const fullUrl = window.location.href + id;
+
+      dispatch(urlActions.setLongUrl(values.theUrl));
+      dispatch(urlActions.setShortUrl(fullUrl));
+      navigate('/shortened');
       
     },
   });
