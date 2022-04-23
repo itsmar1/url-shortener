@@ -1,6 +1,9 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
+
+
 
 const UrlBox = () => {
   const formik = useFormik({
@@ -10,8 +13,22 @@ const UrlBox = () => {
     validationSchema: Yup.object({
       theUrl: Yup.string().url("Enter a valid URL"),
     }),
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      console.log(values.theUrl);
+      const graphqlQuery = {
+        query: `
+          mutation {
+            shortenUrl(longUrl: "${values.theUrl}") {
+              shortUrl
+            }
+          }
+        `
+      };
+
+      const shortUrl = await axios.post('http://localhost:8080/graphql', graphqlQuery);
+
+      console.log(shortUrl.data.data.shortenUrl.shortUrl);
+      
     },
   });
 
