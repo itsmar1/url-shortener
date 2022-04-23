@@ -51,5 +51,27 @@ module.exports = {
         return payload;
     },
 
-    getClicks: ({ shortUrl }) => {}
+    getClicks: async ({ shortUrl }) => {
+        const theUrl = await ShortUrl.findOne({ shortUrl: shortUrl });
+
+        if (!theUrl) {
+            const error = new Error("Short Url NOT FOUND!");
+            error.statusCode = 404;
+            throw error;
+        }
+
+        return  theUrl;
+    },
+
+    getShortUrl: async ({ longUrl }) => {
+        const theUrl = await ShortUrl.findOne({ longUrl: longUrl });
+
+        if (!theUrl) {
+            const error = new Error("Short Url NOT FOUND!");
+            error.statusCode = 404;
+            throw error;
+        }
+
+        return  theUrl;
+    }
 }
