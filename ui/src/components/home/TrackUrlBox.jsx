@@ -15,7 +15,7 @@ const TrackUrlBox = () => {
         </p>
       </div>
       <div>
-        <Link to="/">
+        <Link to="/click-counter">
           <button className="btn btn-primary text-xl shadow-lg">Track URL</button>
         </Link>
       </div>

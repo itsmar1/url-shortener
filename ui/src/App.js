@@ -6,12 +6,16 @@ import ShortenedPage from './pages/ShortenedPage';
 import ClickCounter from './pages/ClickCounter';
 import TheHeader from './layout/TheHeader';
 import TheFooter from './layout/TheFooter';
+import ParticlesBackground from './layout/ParticlesBackground';
 
 
 
 const App = () => {
   return (
     <>
+      <div>
+        <ParticlesBackground />
+      </div>
       <TheHeader />
       <Routes>
         <Route path='/' element={<TheHomePage />} />
