@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const TrackUrlBox = () => {
   return (
     <div className="trackbox text-center mx-auto">
-      <h1>Want More? Track Short URL Clicks!</h1>
+      <h1>Want More? Track Shortened URL Clicks!</h1>
       <div className="mx-auto">
         <p className="text-center mx-auto">
           Your shortened URLs can be tracked by clicks. Track statistics for
