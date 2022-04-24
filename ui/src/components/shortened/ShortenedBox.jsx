@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
 const ShortenedBox = ({ longUrl, shortUrl }) => {
@@ -11,9 +12,11 @@ const ShortenedBox = ({ longUrl, shortUrl }) => {
                     <div className='input-group'>
                         <input type="text" className='form-control' defaultValue={shortUrl} />
                         <div className="input-group-append">
-                            <button className='btn btn-primary'>
-                                Copy URL
-                            </button>
+                            <CopyToClipboard text={shortUrl} >
+                                <button className='btn btn-primary' onClick={(e) => e.preventDefault()}>
+                                    Copy URL
+                                </button>
+                            </CopyToClipboard>
                         </div>
                     </div>
                 </form>
