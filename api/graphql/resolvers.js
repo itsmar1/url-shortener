@@ -33,7 +33,10 @@ module.exports = {
         });
 
         const createdUrl = await url.save();
-        return createdUrl;
+        // return createdUrl;
+        return {
+            ...createdUrl._doc
+        }
     },
 
     getLongUrl: async ({ shortUrl }) => {

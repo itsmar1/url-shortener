@@ -23,6 +23,16 @@
         border-radius: 2px;
         padding: 3.5rem;
         background: #fff;
+        .clicks {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            color: $blue;
+            background-color: white;
+            border: 4px solid black;
+            font-weight: bold;
+            font-size: 2rem;
+        }
     }
 
     .text-note {
