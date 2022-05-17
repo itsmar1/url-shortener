@@ -30,12 +30,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 * [SCSS](https://sass-lang.com/) - css preprocessor
 
 
+## Docker
+Using docker compose run `docker-compose up`
+
+
 ## Live Demo
-Click [HERE](https://github.com/itsmar1) for demo
+Click [HERE](https://theshortenedurl.herokuapp.com) for demo
 
 ## Author
 
-[**Marwan Ahal**](https://github.com/itsmar1)
+[**Marwan Ahal**](https://www.soymarwan.com/)
 
 ## License
 
